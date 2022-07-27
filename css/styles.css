@@ -67,6 +67,7 @@ ul li:hover .sub-menu ul li:last-child {
 section {
   display: flex;
   justify-content: left;
+  flex-wrap: wrap;
   height: 100vh;
   width: auto;
   background-image: url("../images/hezolarem.JPG");
@@ -157,13 +158,6 @@ section {
 .row .col h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-}
-/* Mobile Screen */
-@media only screen and (max-width: 767px) {
-  .row {
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
-  }
 }
 
 .subscribe {
@@ -354,6 +348,7 @@ footer ul li a:hover {
   font-size: 30px;
 }
 
+/* Mobile Screen */
 @media (max-width: 768px) {
   nav#nav-content {
     display: none;
@@ -400,5 +395,30 @@ footer ul li a:hover {
 
   #close-btn {
     display: inline-block;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .title {
+    margin: 1rem;
+    width: 100vw;
+  }
+
+  .title p {
+    margin: 0.5rem 0 1.5rem 0;
+    text-align: left;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
